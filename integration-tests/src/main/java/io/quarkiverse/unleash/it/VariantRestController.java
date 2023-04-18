@@ -43,6 +43,8 @@ public class VariantRestController {
 
     @GET
     public Response variants() {
+        System.out.println("#### " + defaultType);
+        System.out.println("#### " + defaultType.get());
         Map<String, Object> tmp = new HashMap<>();
         tmp.put("defaultType", Map.of("data", defaultType.get()));
         tmp.put("jsonType", jsonType.get());
